@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浏览器博物馆</title>
+     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!-- [if lt IE 9]> -->
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <!-- [endif] -->
+    <link rel="stylesheet" href="./js/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top"  role="navigation">
+        <div class="container">
+          <!-- 自适应下拉 -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">浏览器博物馆</a>
+          </div>
+          <!-- 内容项目 -->
+          <div class="collapse navbar-collapse" id="demo-navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">综述</a></li>
+              <li><a href="#center">简述</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">特点 <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#tab-chrome">Chrome</a></li>
+                  <li><a href="#tab-firefox">Firefox</a></li>
+                  <li><a href="#tab-safari">Safari</a></li>
+                  <li><a href="#tab-opera">Opera</a></li>
+                  <li><a href="#tab-ie">IE</a></li>
+                </ul>
+              </li>
+              <li><a href="#" data-toggle="modal" data-target="#myModal">关于</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- banner -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="./img/banner.jpg" alt="谷歌浏览器">
+            <div class="carousel-caption">
+              <h1>Chrome</h1>
+              <p>谷歌浏览器 (Google Chrome)是由Google开发的一款简单便捷的网页浏览工具。可帮你快速、安全的搜索到自己需要的内容，功能强大，可以保证用户在多开网页的情况下使浏览器快速稳定运行。</p>
+              <p><a class="btn btn-lg btn-primary" href="https://shouji.baidu.com/software/25943962.html" target="_blank" role="button">点我下载</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/banner2.jpg" alt="火狐浏览器">
+            <div class="carousel-caption">
+                <h1>Firefox</h1>
+                <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”。引擎反应更快，内存占用更少，速度更快，真正的隐私保护，还有众多自定义功能。快，只为更好。Fast for good.</p>
+                <p><a class="btn btn-lg btn-primary" href="http://www.firefox.com.cn/" target="_blank" role="button">点我下载</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/banner3.jpg" alt="Safari浏览器">
+            <div class="carousel-caption">
+                <h1>Safari</h1>
+                <p>我们精心打造 Safari 浏览器，使其能够完美搭配你的 Mac、iPhone 和 iPad。内置隐私功能可以帮助你保护自己的网页浏览信息。</p>
+                <p><a class="btn btn-lg btn-primary" href="https://www.apple.com.cn/safari/" target="_blank" role="button">点我下载</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/banner4.jpg" alt="Opera 浏览器">
+            <div class="carousel-caption">
+                <h1>Opera</h1>
+                <p>欧朋浏览器秉承了 Opera 速度快、省流量、功能强大的优点并为中国用户精心设计及推出了本地化的优质服务，为用户提供最佳的移动互联网体验。</p>
+                <p><a class="btn btn-lg btn-primary" href="http://www.oupeng.com/download" target="_blank" role="button">点我下载</a></p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./img/banner5.jpg" alt="IE浏览器">
+            <div class="carousel-caption">
+                <h1>IE</h1>
+                <p>IE浏览器作为微软官方的一款核心产品，在稳定性和可靠性上与大幅改善外，提供了大量的新功能。IE浏览器最受关注的应该是其在个人隐私方面的功能改善。</p>
+                <p><a class="btn btn-lg btn-primary" href="https://dl.pconline.com.cn/html_2/1/104/id=640&pn=0.html" target="_blank" role="button">点我下载</a></p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">上一页</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">下一页</span>
+        </a>
+    </div>
+
+  <!-- 栅格系统 -->
+  <div class="container" id="center">
+  <div class="row">
+    <div class="col-md-4">
+      <img class="img-circle" src="./img/chrome.jpg" alt="谷歌浏览器">
+        <h3>Chrome</h3>
+        <p>谷歌浏览器 (Google Chrome)是由Google开发的一款简单便捷的网页浏览工具。</p>
+        <p><a class="btn btn-default" href="https://shouji.baidu.com/software/25943962.html" target="_blank" role="button">点我下载</a></p>
+    </div>
+    <div class="col-md-4">
+      <img class="img-circle" src="./img/firefox.jpg" alt="火狐浏览器">
+          <h3>Firefox</h3>
+          <p>Mozilla Firefox，中文名通常称为“火狐”。引擎反应更快。快，只为更好。Fast for good.</p>
+          <p><a class="btn btn-default" href="http://www.firefox.com.cn/" target="_blank" role="button">点我下载</a></p>
+    </div>
+    <div  class="col-md-4">
+      <img class="img-circle" src="./img/safia.jpg" alt="Safari浏览器">
+          <h3>Safari</h3>
+          <p>我们精心打造 Safari 浏览器，使其能够完美搭配你的 Mac、iPhone 和 iPad。</p>
+          <p><a class="btn btn-default" href="https://www.apple.com.cn/safari/" target="_blank" role="button">点我下载</a></p>
+    </div>
+  </div>
+        <hr class="divider"/>
+</div>
+
+  <!-- 标签页 -->
+  <div class="container" id="center">
+    <ul class="nav nav-tabs" role="tablist" id="tab-list">
+      <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Chrome</a></li>
+      <li ><a href="#tab-firefox" role="tab" data-toggle="tab">Firefox</a></li>
+      <li><a href="#tab-safari" role="tab" data-toggle="tab">Safari</a></li>
+      <li><a href="#tab-opera" role="tab" data-toggle="tab">Opera</a></li>
+      <li><a href="#tab-ie" role="tab" data-toggle="tab">IE</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab-chrome">
+        <div class="row feature">
+          <div class="col-md-7">
+              <h2 class="feature-heding">Google Chrome <span class="text-muted">使用最广的浏览器</span></h2>
+              <p class="lead">Google Chrome是一款由Google公司开发的网页浏览器，该浏览器基于其他开源软件撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。Google Chrome的特点是简洁、快速。GoogleChrome支持多标签浏览，每个标签页面都在独立的“沙箱”内运行，在提高安全性的同时，一个标签页面的崩溃也不会导致其他标签页面被关闭。此外，Google Chrome基于更强大的JavaScript V8引擎，这是当前Web浏览器所无法实现的。</p>
+              <p class="lead">软件的名称是来自于称作Chrome的网络浏览器GUI（图形使用者界面）。软件的beta测试版本在2008年9月2日发布，提供50种语言版本，有Windows、OS X、Linux、Android、以及iOS版本提供下载。谷歌将在谷歌浏览器Chrome上推出“小程序”增强型网页应用（ Progressive Web Apps，简称 PWA）。  2018年11月，Google宣布，将从2018年12月份开始在其Chrome 71网络浏览器上移除持续提供滥用使用体验的网站上的所有广告。  </p>
+          </div>
+          <div class="col-md-5">
+            <img class="feature-image img-responsive" src="./img/chrome.jpg" alt="chrome"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="tab-firefox">
+        <div class="row feature">
+        <div class="col-md-5">
+          <img class="feature-image img-responsive" src="./img/firefox.jpg" alt="firefox"/>
+          
+      </div>
+      <div class="col-md-7">
+        <h2 class="feature-heding">Mozilla Firefox <span class="text-muted">最快的浏览器</span></h2>
+        <p class="lead">Mozilla Firefox，中文俗称“火狐”（正式缩写为Fx或fx，非正式缩写为FF），是一个自由及开放源代码网页浏览5261器，使用Gecko排版引擎，支持多种操作系统，如Windows、Mac OS X及GNU/Linux等。该浏览器提供了两种版本，普通版和ESR版，ESR版本是 Mozilla 专门为那些无法或不愿每隔六周就升级一次的企业打造。</p>
+        <p class="lead">Firefox支持非常多的网络标准，如标准通用标记语言下的子集HTML和XML、XHTML、SVG 1.1（部分的）、CSS（除了标准之外，还有扩充的支持）、ECMAScript（JavaScript）、DOM、MathML、DTD、XSLT、XPath和PNG图像文件（包含透明度支持）。
+          在Firefox 3.0 Alpha 2时通过Acid2测试和Acid3 71/100项测试，Firefox 3.1的版本可通过Acid3 93/100项测试，Firefox 3.6达到Acid3 94/100的标准，到Firefox 7.0版本更已达到Acid3 100/100满分标准。</p>
+      </div>
+      </div>
+      </div>
+
+      <div class="tab-pane" id="tab-safari">
+        <div class="row feature">
+        <div class="col-md-7">
+          <h2 class="feature-heding">Safari <span class="text-muted">苹果浏览器，Mac用户首选</span></h2>
+          <p class="lead">Safari是苹果计算机的操作系统macOS中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。Safari 是一款浏览器、一个平台，也是对锐意创新的公开邀请。无论在 Mac、PC 或 iPod touch 上运行，Safari 都可提供极致愉悦的网络体验方式，更不断地改写浏览器的定义。Safari也是iPhone手机、iPod Touch、iPad平板电脑中iOS指定默认浏览器。Safari 以惊人速度渲染网页。与 Mac、PC 及 iPod touch、iPhone、iPad完美兼容。让最爱网站一目了然。聪明的它还会检查拼写和语法。</p>
+          <p class="lead">苹果公司自己的内核，也是苹果的Safari浏览器使用的内核。 使用Webkit引擎，包含WebCore排版引擎及JavaScriptCore解析引擎，均是从KDE的KHTML及KJS引擎衍生而来，它们都是自由软件，在GPL条约下授权，同时支持BSD系统的开发。所以Webkit也是自由软件，同时开放源代码。在安全方面不受IE、Firefox的制约，所以Safari浏览器在国内还是很安全的。</p>
+        </div>
+      <div class="col-md-5">
+        <img class="feature-image img-responsive" src="./img/safia.jpg" alt="Safari"/>
+      </div>
+      </div>
+      </div>
+      <div class="tab-pane" id="tab-opera">
+        <div class="row feature">
+        <div class="col-md-5">
+           <img class="feature-image img-responsive" src="./img/openg.jpg" alt="openg"/>
+      </div>
+      <div class="col-md-7">
+       <h2 class="feature-heding">Opera<span class="text-muted">支持多系统浏览器</span></h2>
+          <p class="lead">Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器，是跨平台浏览器可以在Windows、Mac和Linux三个操作系统平台上运行。Opera浏览器因为它的快速、小巧和比其他浏览器更佳的标准兼容性获得了国际上的最终用户和业界媒体的承认，并在网上受到很多人的推崇。OperaSoftware开发的Opera浏览器是一款适用于各种平台、操作系统和嵌入式网络产品的高品质、多平台产品，</p>
+          <p class="lead">欧朋浏览器支持智能预读、智能缩放、手势操作，外加时尚个性化的界面设计；支持手机WAP和WWW站点全网浏览，收录海量精彩网址；轻松上微博，随时查看热点微博资讯，一键分享、转发或收藏。同时具备全球首创内置浏览提醒功能，为用户提供最贴心的移动互联网体验。</p>
+        </div>
+      </div>
+      </div>
+      <div class="tab-pane" id="tab-ie">
+        <div class="row feature">
+        <div class="col-md-7">
+          <h2 class="feature-heding">IE <span class="text-muted">使用最广泛的浏览器</span></h2>
+          <p class="lead">Internet Explorer（简称：IE）是微软公司推出的一款网页浏览器。原称Microsoft Internet Explorer(6版本以前)和Windows Internet Explorer(7、8、9、10、11版本)，简称IE。在IE7以前，中文直译为“网络探路者”，但在IE7以后官方便直接俗称"IE浏览器"。IE，是微软公司（Microsoft）推出的一款网页浏览器。截至2010年9月止，统计的数据显示IE占有率高达59.65%。虽然它依然是使用最广泛的网页浏览器，但与2003年最高Windows操作系统的一个组成部分。在旧版的Windows操作系统上，它是独立且免费的。从Windows 95OSR2开始，它是随所有新版本的Windows操作系统附送的默认浏览器。</p>
+          <p class="lead">IE开发计划开始于1994年夏天，微软为抵抗当时主流的网景浏览器（NetscapeNavigator），要在Windows中开发适合自己的浏览器。但微软并没有时间从零开始，因此微软和Spyglass合作，于是IE从早期一款商业性的专利网页浏览器Spyglass Mosaic派生出来，虽然Spyglass Mosaic与NCSA Mosaic(首款应用得最广泛的网页浏览器)甚为相似，但Spyglass Mosaic则相对地较不出名并使用了NCSA Mosaic少量的源代码。</p>
+        </div>
+      <div class="col-md-5">
+        <img class="feature-image img-responsive" src="./img/ie.jpg" alt="IE"/>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 底部 -->
+  <hr class="divider"/>
+  <div class="footer">
+    <p class="pull-center"><a href="#top">回到顶部</a></p>
+    <p>2020-5-28 基本项目练习</p>
+  </div>  
+  
+   <!-- 模态框（弹出框） -->
+   
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-header">
+          <h4 class="modal-title" id="myModalLabel">关于</h4>
+        </div>
+        <div class="modal-body">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;本项目是对于bootstrap的基本使用的练习，使用的boostrtap中的下拉菜单、滚动广告Carousel、栅格系统布局、弹出框（模态框）Modal、打开标签页等功能。图片、链接均在来自百度。</p>
+          <p class="pull-right">2020-5-28</p>
+          <p>&nbsp;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">我已了解</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./js/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#demo-navbar .dropdown-menu a').click(function(){
+      var href = $(this).attr('href');
+      $("#tab-list a[href='"+ href +"']").tab("show");
+    })
+  })
+</script>
+</html>
